@@ -53,6 +53,9 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\WeaponFactories\HardDifficultyWeaponFactoryTests.cs" />
+    <Compile Include="Factories\WeaponFactories\MediumDifficultyWeaponFactoryTests.cs" />
+    <Compile Include="Factories\WeaponFactories\EasyDifficultyWeaponFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameTest.cs" />
   </ItemGroup>

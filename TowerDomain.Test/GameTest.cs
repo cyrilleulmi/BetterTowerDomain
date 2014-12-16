@@ -1,35 +1,34 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using BetterTowerDomain;
-using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace TowerDomain.Test
+﻿namespace TowerDomain.Test
 {
+    using System.Linq;
+
+    using BetterTowerDomain;
+    using BetterTowerDomain.Exceptions;
+    using BetterTowerDomain.Tower;
+
+    using FluentAssertions;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     /// <summary>
     /// Zusammenfassungsbeschreibung für GameTest
     /// </summary>
     [TestClass]
     public class GameTest
     {
-         private Game testee;
+        private Game testee;
 
         [TestInitialize]
         public void TestInitialize()
         {
-            this.testee = new Game();
+            this.testee = new Game(Difficulty.Medium);
         }
 
         [TestMethod]
         public void BuildNewTower()
         {
-            // Arrange
-            Tower tower = new Tower();
-
             // Act
-            this.testee.CreateNewTower(tower);
+            this.testee.CreateNewTower();
 
             // Assert
             this.testee.Towers.Count().Should().Be(1);
@@ -38,101 +37,133 @@ namespace TowerDomain.Test
         [TestMethod]
         public void DescriptionIsCorrect()
         {
-            // Arrange
-            Tower tower = new Tower();
-
             // Act
-            this.testee.CreateNewTower(tower);
+            this.testee.CreateNewTower();
 
             // Assert
-            this.testee.Towers.ElementAt(0).Description.Should().Be("This tower deals 10 damage and has a range of 10");
+            CheckDescriptionFromTower(this.testee.Towers.ElementAt(0));
         }
 
         [TestMethod]
         public void UpgradeTowerRange()
         {
-            // Arrange
-            Tower normalTower = new Tower();
-            Tower towerWithRangeUpgrade = new Tower();
-
-            this.testee.CreateNewTower(towerWithRangeUpgrade);
-            this.testee.CreateNewTower(normalTower);
+            this.testee.CreateNewTower();
+            this.testee.CreateNewTower();
 
             // Act
-            testee.UpgradeRangeFromTower(towerWithRangeUpgrade);
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
 
             // Assert
-            testee.Towers.ElementAt(0).Range.Should().BeGreaterThan(testee.Towers.ElementAt(1).Range);
+            this.testee.Towers.ElementAt(0).Range.Should().BeGreaterThan(this.testee.Towers.ElementAt(1).Range);
         }
 
         [TestMethod]
         public void DescriptionIsCorrectWithRangeUpgrade()
         {
             // Arrange
-            Tower towerWithRangeUpgrade = new Tower();
-
-            this.testee.CreateNewTower(towerWithRangeUpgrade);
+            this.testee.CreateNewTower();
 
             // Act
-            testee.UpgradeRangeFromTower(towerWithRangeUpgrade);
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
 
             // Assert
-            this.testee.Towers.ElementAt(0).Description.Should().Be("This tower deals 10 damage and has a range of 15");
+            CheckDescriptionFromTower(this.testee.Towers.ElementAt(0));
         }
 
         [TestMethod]
         public void UpgradeTowerDamage()
         {
             // Arrange
-            Tower normalTower = new Tower();
-            Tower towerWithDamageUpgrade = new Tower();
-
-            this.testee.CreateNewTower(towerWithDamageUpgrade);
-            this.testee.CreateNewTower(normalTower);
+            this.testee.CreateNewTower();
+            this.testee.CreateNewTower();
 
             // Act
-            testee.UpgradeDamageFromTower(towerWithDamageUpgrade);
+            this.testee.UpgradeDamageFromTower(this.testee.Towers.ElementAt(0));
 
             // Assert
-            testee.Towers.ElementAt(0).Damage.Should().BeGreaterThan(testee.Towers.ElementAt(1).Range);
+            this.testee.Towers.ElementAt(0).Damage.Should().BeGreaterThan(this.testee.Towers.ElementAt(1).Range);
+        }
+
+        [TestMethod]
+        public void DescriptionIsCorrectWithDamageUpgrade()
+        {
+            // Arrange
+            this.testee.CreateNewTower();
+
+            // Act
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
+
+            // Assert
+            CheckDescriptionFromTower(this.testee.Towers.ElementAt(0));
         }
 
         [TestMethod]
         public void UpgradeTowerFirstDamageThanRange()
         {
             // Arrange
-            Tower towerWithDamageAndRangeUpgrade = new Tower();
-            Tower normalTower = new Tower();
-
-            this.testee.CreateNewTower(towerWithDamageAndRangeUpgrade);
-            this.testee.CreateNewTower(normalTower);
+            this.testee.CreateNewTower();
+            this.testee.CreateNewTower();
 
             // Act
-            testee.UpgradeDamageFromTower(testee.Towers.ElementAt(0));
-            testee.UpgradeRangeFromTower(testee.Towers.ElementAt(0));
+            this.testee.UpgradeDamageFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
 
             // Assert
-            testee.Towers.ElementAt(0).Damage.Should().BeGreaterThan(testee.Towers.ElementAt(1).Range);
-            testee.Towers.ElementAt(0).Range.Should().BeGreaterThan(testee.Towers.ElementAt(1).Range);
+            this.testee.Towers.ElementAt(0).Damage.Should().BeGreaterThan(this.testee.Towers.ElementAt(1).Range);
+            this.testee.Towers.ElementAt(0).Range.Should().BeGreaterThan(this.testee.Towers.ElementAt(1).Range);
         }
 
         [TestMethod]
         public void UpgradeTowerFirstRangeThanDamage()
         {
-            // Arrange
-            Tower towerWithDamageAndRangeUpgrade = new Tower();
-            Tower normalTower = new Tower();
-
-            this.testee.CreateNewTower(towerWithDamageAndRangeUpgrade);
-            this.testee.CreateNewTower(normalTower);
+            this.testee.CreateNewTower();
+            this.testee.CreateNewTower();
 
             // Act
-            testee.UpgradeRangeFromTower(testee.Towers.ElementAt(0));
-            testee.UpgradeDamageFromTower(testee.Towers.ElementAt(0));
+            this.testee.UpgradeDamageFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
 
             // Assert
-            testee.Towers.ElementAt(0).Damage.Should().BeGreaterThan(testee.Towers.ElementAt(1).Range);
-            testee.Towers.ElementAt(0).Range.Should().BeGreaterThan(testee.Towers.ElementAt(1).Range);
+            this.testee.Towers.ElementAt(0).Damage.Should().BeGreaterThan(this.testee.Towers.ElementAt(1).Damage);
+            this.testee.Towers.ElementAt(0).Range.Should().BeGreaterThan(this.testee.Towers.ElementAt(1).Range);
+        }
+
+        [TestMethod]
+        public void UpgradingATowerFourTimesWorks()
+        {
+            // Arrange
+            this.testee.CreateNewTower();
+
+            // Act
+            this.testee.UpgradeDamageFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeDamageFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
+
+            // Assertion: passes if no exception is thrown
+        }
+
+        [ExpectedException(typeof(ToManyUpgradesException))]
+        [TestMethod]
+        public void UpgradeTowerFourTimesWithDamage_ThrowsException()
+        {
+            // Arrange
+            this.testee.CreateNewTower();
+
+            // Act
+            this.testee.UpgradeDamageFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeDamageFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeRangeFromTower(this.testee.Towers.ElementAt(0));
+            this.testee.UpgradeDamageFromTower(this.testee.Towers.ElementAt(0));
+
+            // Assertion is in the Tag
+        }
+
+        private static void CheckDescriptionFromTower(ITower tower)
+        {
+            tower.Description.Should()
+                .Be(string.Format("This tower deals {0} damage and has a range of {1}", tower.Damage, tower.Range));
         }
     }
 }
