@@ -6,4 +6,3 @@ C:\Users\cyrilleulmi\Documents\GitHub\BetterTowerDomain\BetterTowerDomain\bin\De
 C:\Users\cyrilleulmi\Documents\GitHub\BetterTowerDomain\BetterTowerDomain\bin\Debug\BetterTowerDomain.pdb
 C:\Users\cyrilleulmi\Documents\GitHub\BetterTowerDomain\BetterTowerDomain\obj\Debug\BetterTowerDomain.dll
 C:\Users\cyrilleulmi\Documents\GitHub\BetterTowerDomain\BetterTowerDomain\obj\Debug\BetterTowerDomain.pdb
-C:\Users\cyrilleulmi\Documents\GitHub\BetterTowerDomain\BetterTowerDomain\obj\Debug\BetterTowerDomain.csprojResolveAssemblyReference.cache
