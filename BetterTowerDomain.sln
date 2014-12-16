@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterTowerDomain", "BetterTowerDomain\BetterTowerDomain.csproj", "{3B327A81-2014-4E40-982D-7BE9E116A364}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDomain.Test", "TowerDomain.Test\TowerDomain.Test.csproj", "{64C2937E-3B23-4DCE-A29A-1421B68509D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44CE0DE2-6EC1-46F8-952C-2782B9D26266}"
+	ProjectSection(SolutionItems) = preProject
+		BetterTowerDomain.vsmdi = BetterTowerDomain.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = BetterTowerDomain.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B327A81-2014-4E40-982D-7BE9E116A364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B327A81-2014-4E40-982D-7BE9E116A364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B327A81-2014-4E40-982D-7BE9E116A364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B327A81-2014-4E40-982D-7BE9E116A364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C2937E-3B23-4DCE-A29A-1421B68509D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C2937E-3B23-4DCE-A29A-1421B68509D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C2937E-3B23-4DCE-A29A-1421B68509D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C2937E-3B23-4DCE-A29A-1421B68509D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

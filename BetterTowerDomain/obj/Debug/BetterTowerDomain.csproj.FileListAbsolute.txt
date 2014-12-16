@@ -1,0 +1,4 @@
+c:\users\inf3a-22\documents\visual studio 2010\Projects\BetterTowerDomain\BetterTowerDomain\bin\Debug\BetterTowerDomain.dll
+c:\users\inf3a-22\documents\visual studio 2010\Projects\BetterTowerDomain\BetterTowerDomain\bin\Debug\BetterTowerDomain.pdb
+c:\users\inf3a-22\documents\visual studio 2010\Projects\BetterTowerDomain\BetterTowerDomain\obj\Debug\BetterTowerDomain.dll
+c:\users\inf3a-22\documents\visual studio 2010\Projects\BetterTowerDomain\BetterTowerDomain\obj\Debug\BetterTowerDomain.pdb
