@@ -1,4 +1,4 @@
-﻿namespace TowerDomain.Test.Factories.WeaponFactories
+﻿namespace BetterTowerDomain.Test.Factories.WeaponFactories
 {
     using BetterTowerDomain.Factories.WeaponFactories;
     using BetterTowerDomain.Wapon;

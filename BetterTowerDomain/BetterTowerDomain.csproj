@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Difficulty.cs" />
+    <Compile Include="Helper\Difficulty.cs" />
     <Compile Include="Exceptions\ToManyUpgradesException.cs" />
     <Compile Include="Factories\TowerFactory.cs" />
     <Compile Include="Factories\WeaponFactories\HardDifficultyWeaponFactory.cs" />
