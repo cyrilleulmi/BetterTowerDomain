@@ -163,7 +163,7 @@
         private static void CheckDescriptionFromTower(ITower tower)
         {
             tower.Description.Should()
-                .Be(string.Format("This tower deals {0} damage and has a range of {1}", tower.Damage, tower.Range));
+                .Be(string.Format("Tower which deals {0} damage and has a range of {1}", tower.Damage, tower.Range));
         }
     }
 }

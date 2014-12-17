@@ -1,0 +1,13 @@
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\BetterTowerDomain.Test.dll
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\BetterTowerDomain.Test.pdb
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\BetterTowerDomain.dll
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\FluentAssertions.Core.dll
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\FluentAssertions.dll
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\BetterTowerDomain.pdb
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\FluentAssertions.pdb
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\FluentAssertions.xml
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\FluentAssertions.Core.pdb
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\bin\Debug\FluentAssertions.Core.xml
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\obj\Debug\BetterTowerDomain.Test.csprojResolveAssemblyReference.cache
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\obj\Debug\BetterTowerDomain.Test.dll
+C:\Users\Cyrille\Documents\GitHub\BetterTowerDomain\TowerDomain.Test\obj\Debug\BetterTowerDomain.Test.pdb

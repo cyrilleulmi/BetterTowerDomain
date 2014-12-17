@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterTowerDomain", "BetterTowerDomain\BetterTowerDomain.csproj", "{3B327A81-2014-4E40-982D-7BE9E116A364}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterTowerDomain.Test", "TowerDomain.Test\BetterTowerDomain.Test.csproj", "{64C2937E-3B23-4DCE-A29A-1421B68509D4}"
@@ -14,7 +12,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterTowerDomain.Ui", "BetterTowerDomain.Ui\BetterTowerDomain.Ui.csproj", "{5147A5EE-0745-4EB1-B5EF-0CEBF04AB3F5}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = BetterTowerDomain.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -28,11 +31,12 @@ Global
 		{64C2937E-3B23-4DCE-A29A-1421B68509D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64C2937E-3B23-4DCE-A29A-1421B68509D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64C2937E-3B23-4DCE-A29A-1421B68509D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5147A5EE-0745-4EB1-B5EF-0CEBF04AB3F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5147A5EE-0745-4EB1-B5EF-0CEBF04AB3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5147A5EE-0745-4EB1-B5EF-0CEBF04AB3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5147A5EE-0745-4EB1-B5EF-0CEBF04AB3F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = BetterTowerDomain.vsmdi
 	EndGlobalSection
 EndGlobal

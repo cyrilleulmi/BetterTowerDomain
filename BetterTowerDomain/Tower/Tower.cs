@@ -18,7 +18,7 @@
 
         public string Description
         {
-            get { return string.Format("This tower deals {0} damage and has a range of {1}", this.Damage, this.Range); }
+            get { return string.Format("Tower which deals {0} damage and has a range of {1}", this.Damage, this.Range); }
         }
 
         public int Level
@@ -63,6 +63,11 @@
             {
                 throw new ToManyUpgradesException();
             }
+        }
+
+        public override string ToString()
+        {
+            return this.Description;
         }
     }
 }
